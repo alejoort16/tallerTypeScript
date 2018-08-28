@@ -7,7 +7,8 @@ export class Gato extends Animal implements Mamifero {
 
     pelo: string;
     crecerPelo(): string {
-       return 'Pelo creciendo';
+        console.log('Pelo creciendo (Gato)');
+        return 'Pelo creciendo (Gato)';
     }
     constructor(trepa: Trepar) {
         super(trepa);
@@ -30,7 +31,8 @@ export class Gato extends Animal implements Mamifero {
         this.raza = val;
     }
 
-     maullar(maullido: string): string{
+    public maullar(maullido: string): string{
+        console.log(maullido + 'meow');
         return maullido + 'meow!';
     }
 

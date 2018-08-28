@@ -3,6 +3,8 @@ import { Mamifero } from './Mamifero';
 import {NoTrepa} from './NoTrepa';
 
 export function ladrar(ladrado: string): string {
+    console.log(ladrado + 'Woof!');
+    
     return ladrado + 'Woof!';
 }
 
@@ -46,18 +48,22 @@ export class Perro extends Animal implements Mamifero {
     }
 
     crecerPelo(): string {
-        return 'Pelo creciendo';
+        console.log('Pelo creciendo (Perro)');      
+        return 'Pelo creciendo (Perro)';
     }
 
     moverse(movimiento: Movimientos): string{
         switch (movimiento) {
             case Movimientos.DERECHA:
+                console.log('Movimiento a la derecha');                
                 return 'Movimiento a la derecha';
 
             case Movimientos.IZQUIERDA:
+                console.log('Movimiento a la izquierda');           
                 return 'Movimiento a la izquierda';
         
             default:
+                console.log('movimiento');
                 'movimiento';
         }
         
